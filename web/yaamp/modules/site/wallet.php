@@ -8,9 +8,9 @@ JavascriptFile('/yaamp/ui/js/auto_refresh.js');
 
 $recents = isset($_COOKIE['wallets'])? unserialize($_COOKIE['wallets']): array();
 
-$address = getparam('address');
+$address = htmlspecialchars(getparam('address'));
 
-$drop_address = getparam('drop');
+$drop_address = htmlspecialchars(getparam('drop'));
 if (!empty($drop_address)) {
 	// to clean cookies
 	foreach($recents as $k=>$addr) {

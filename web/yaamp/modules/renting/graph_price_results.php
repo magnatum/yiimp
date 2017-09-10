@@ -11,10 +11,15 @@ $averages = array();
 
 echo '[[';
 
+$prevDate = null;
+
 for($i = 0; $i < 95-count($stats); $i++)
 {
+        if($prevDate != null) echo ",";
 	$d = date('Y-m-d H:i:s', $t);
-	echo "[\"$d\",0],";
+        $prevDate = $d;
+
+	echo "[\"$d\",0]";
 
 	$t += $step;
 	$averages[] = array($d, 0);

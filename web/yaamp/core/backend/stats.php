@@ -88,7 +88,7 @@ function BackendStatsUpdate()
 		$pool_rate_bad = yaamp_pool_rate_bad($algo);
 		$stats->hashrate_bad = $pool_rate_bad;	//round(($stats->hashrate_bad*(100-$percent) + $pool_rate_bad*$percent) / 100);
 
-		if($stats->hashrate < 1000) $stats->hashrate = 0;
+		//if($stats->hashrate < 1000) $stats->hashrate = 0;
 
 		$t1 = time() - 5*60;
 		$total_rentable = dboscalar("select sum(difficulty) from shares where valid and extranonce1 and algo=:algo and time>$t1", array(':algo'=>$algo));
@@ -273,7 +273,7 @@ function BackendStatsUpdate2()
 		$user_rate = yaamp_user_rate($item['userid'], $item['algo']);
 
 		$stats->hashrate = round(($stats->hashrate*(100-$percent) + $user_rate*$percent) / 100);
-		if($stats->hashrate < 1000) $stats->hashrate = 0;
+		//if($stats->hashrate < 1000) $stats->hashrate = 0;
 
 		$user_rate_bad = yaamp_user_rate_bad($item['userid'], $item['algo']);
 
@@ -308,7 +308,7 @@ function BackendStatsUpdate2()
 		$job_rate = yaamp_job_rate($jobid);
 
 		$stats->hashrate = round(($stats->hashrate*(100-$percent) + $job_rate*$percent) / 100);
-		if($stats->hashrate < 1000) $stats->hashrate = 0;
+		//if($stats->hashrate < 1000) $stats->hashrate = 0;
 
 		$job_rate_bad = yaamp_job_rate_bad($jobid);
 

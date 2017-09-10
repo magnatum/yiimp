@@ -8,7 +8,7 @@
 # If you can't access these screens, double check
 # the $HOME var is set to your admin user
 
-LOG_DIR=/work/yiimp/log
+LOG_DIR=/var/log
 WEB_DIR=/var/web
 STRATUM_DIR=/var/stratum
 

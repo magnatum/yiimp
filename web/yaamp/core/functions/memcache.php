@@ -1,5 +1,18 @@
 <?php
-
+function memcache_connect($ip, $port)
+{
+   $m = new Memcached();
+   $m->addServer('localhost', 11211);
+   return $m;
+}
+function memcache_get($m, $key)
+{
+   return $m->get($key);
+}
+function memcache_set($m, $key, $value, $options=0, $t=30)
+{
+   $m->set($key, $value, $t);
+}
 class YaampMemcache
 {
 	public $memcache = null;
@@ -57,7 +70,7 @@ class YaampMemcache
 		$value = $this->get($key);
 		if($value === false) {
 			$value = dbolist($query, $params);
-			$this->set($key, $value, $t, MEMCACHE_COMPRESSED);
+			$this->set($key, $value, $t, 2);
 		}
 		return $value;
 	}

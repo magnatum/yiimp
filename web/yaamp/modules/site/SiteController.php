@@ -419,7 +419,7 @@ class SiteController extends CommonController
 		$html = ob_get_clean();
 		echo $html;
 
-		memcache_set($memcache, $memkey, $html, MEMCACHE_COMPRESSED, $cachetime);
+		memcache_set($memcache, $memkey, $html, 2, $cachetime);
 	}
 
 	// Pool Status : public right panel with all algos and live stats

@@ -125,9 +125,9 @@ function showPageHeader()
 	echo '<span style="float: right;">';
 
 	$mining = getdbosql('db_mining');
-	$nextpayment = date('H:i T', $mining->last_payout+YAAMP_PAYMENTS_FREQ);
+	$nextpayment = date('d.m.y H:i T', $mining->last_payout+YAAMP_PAYMENTS_FREQ);
 
-	echo '<span style="font-size: .8em;">Next Payout: '.$nextpayment.'</span>';
+	echo '<span style="font-size: .8em;">Server Time: '.date('d.m.y H:i T', time()).' Next Payout: '.$nextpayment.'</span>';
 
 	echo "</div>";
 	echo "</div>";

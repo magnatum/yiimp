@@ -175,7 +175,7 @@ function getAlgoColors($algo)
 function getAlgoPort($algo)
 {
 	$a = array(
-		'sha256'	=> 3333,
+		'sha256'	=> 3332,
 		'sha256t'	=> 3339,
 		'lbry'		=> 3334,
 		'scrypt'	=> 3433,
@@ -224,7 +224,7 @@ function getAlgoPort($algo)
 		'velvet'	=> 6133,
 		'yescrypt'	=> 6233,
 		'bastion'	=> 6433,
-		'skunk'		=> 8433,
+		'skunk'		=> 3333,
 		'tribus'	=> 8533,
 	);
 

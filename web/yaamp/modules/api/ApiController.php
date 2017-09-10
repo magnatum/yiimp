@@ -97,7 +97,7 @@ class ApiController extends CommonController
 		$json = json_encode($stats);
 		echo $json;
 
-		memcache_set($memcache, "api_status", $json, MEMCACHE_COMPRESSED, 30);
+		memcache_set($memcache, "api_status", $json, 2, 30);
 	}
 
 	public function actionCurrencies()
@@ -186,7 +186,7 @@ class ApiController extends CommonController
 					$data[$symbol]['symbol'] = $coin->symbol2;
 			}
 			$json = json_encode($data);
-			memcache_set($memcache, "api_currencies", $json, MEMCACHE_COMPRESSED, 15);
+			memcache_set($memcache, "api_currencies", $json, 2, 15);
 		}
 
 		echo str_replace("},","},\n", $json);

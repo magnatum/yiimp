@@ -1,8 +1,8 @@
 #!/bin/bash
 
-ROOTDIR=/data/yiimp
+ROOTDIR=/var/www/html/
 DIR=`pwd`
 
-cd "$ROOTDIR/web" && php yaamp/yiic.php $*
+cd "$ROOTDIR" && php yaamp/yiic.php $*
 
 cd $DIR

@@ -38,8 +38,8 @@ return array(
 			'routes'=>array(
 				array(
 					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
-//					'levels'=>'debug, trace, error, warning',
+//					'levels'=>'error, warning',
+					'levels'=>'debug, trace, error, warning',
 				),
 //				array(
 //					'class'=>'CProfileLogRoute',

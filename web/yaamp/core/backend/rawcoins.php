@@ -13,6 +13,9 @@ function updateRawcoins()
 	exchange_set_default('coinexchange', 'disabled', true);
 	exchange_set_default('coinsmarkets', 'disabled', true);
 	exchange_set_default('jubi', 'disabled', true);
+        exchange_set_default('bittrex', 'disabled', true);
+        exchange_set_default('bleutrade', 'disabled', true);
+
 
 	settings_prefetch_all();
 

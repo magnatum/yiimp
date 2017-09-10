@@ -133,7 +133,7 @@ foreach($workers as $worker)
 }
 
 echo "</tbody></table>";
-
+echo "<br/><label>Total Rate: ".$total_rate."</label>";
 
 
 
